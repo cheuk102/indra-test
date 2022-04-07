@@ -1,0 +1,15 @@
+<app-menu></app-menu>
+<div class="container mt-5 card">
+  <h2 class="text-center mt-4"><strong>Platillo del día:</strong> {{mealPlate.name}}</h2>
+  <div class="row mt-4">
+    <div class="col-lg-5 col-md-4 col-sm-12 col-12">
+      <img src="{{mealPlate.image}}" alt="mealPlateImage" class="img-thumbnail meal-img">
+    </div>
+    <div class="col-lg-7 col-md-7 col-sm-12 col-12">
+      <h2 class="text-center">Ingredientes:</h2>
+      <h4 *ngFor="let ingredient of ingredientsList">
+        {{ingredient}}
+      </h4>
+    </div>
+  </div>
+</div>

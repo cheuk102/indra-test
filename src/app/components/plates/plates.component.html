@@ -1,0 +1,39 @@
+<app-menu></app-menu>
+<div class="container mt-5 card">
+  <h2 class="text-center mt-4"><strong>Lista de platillos</strong></h2>
+
+  <h4>Selecciona un filtro para buscar:</h4>
+
+  <div class="row mt-4">
+    <div class="col-4">
+      <span>Categoría:</span>
+      <select [(ngModel)]="categorySelected">
+        <option *ngFor="let category of categories" [value]="category.strCategory">{{category.strCategory}}</option>
+      </select>
+    </div>
+    <div class="col-4">
+      <span>Área:</span>
+      <select [(ngModel)]="areaSelected">
+        <option *ngFor="let area of areas" [value]="area.strArea">{{area.strArea}}</option>
+      </select>
+    </div>
+    <div class="col-4">
+      <div (click)="searchMeals()" class="btn btn-primary">
+        Buscar
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-lg-4">
+      <input type="text" class="form-control" placeholder="Buscar"
+      (keyup)="searchMealsManually($event)" />
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <a [routerLink]="['detailMeal', meal.idMeal]"  
+    *ngFor="let meal of filteredMeals">{{meal.strMeal}} </a>
+  </div>
+
+</div>

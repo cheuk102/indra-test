@@ -1,0 +1,8 @@
+<app-menu></app-menu>
+<div class="container mt-5 card">
+  <h2 class="mt-4">Platillos que contienen {{choosedIngredient}}:</h2>
+  <a [routerLink]="['detailMeal', meal.idMeal]"  
+    *ngFor="let meal of mealsList" class="list-meals my-2">
+  {{meal.strMeal}}
+  </a>
+</div>

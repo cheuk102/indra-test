@@ -1,0 +1,23 @@
+$bg-color-menu: #966d45;
+$font-main: 'Poppins', sans-serif;
+
+.menu {
+  &-header {
+    div {
+      height: 70px;
+      background-color: $bg-color-menu;
+      color: #FFF;
+      border-right: 1px solid saddlebrown;
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 2rem;
+        display: block;
+        height: inherit;
+        font-family: $font-main;
+      }
+    }
+
+  }
+}

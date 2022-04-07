@@ -1,0 +1,8 @@
+<app-menu></app-menu>
+<div class="container mt-5 card">
+  <h2 class="text-center mt-4"><strong>Ingredientes Populares:</strong></h2>
+    <a *ngFor="let ingredient of ingredientsList" 
+    [routerLink]="['meals', ingredient.strIngredient]" class="text-center ingredients-list">
+      {{ingredient.strIngredient}}
+    </a>
+</div>

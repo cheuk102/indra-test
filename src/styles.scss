@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~ngx-toastr/toastr';
+
+body {
+  background-color: #d8d8d8;
+}
+
+.card {
+  border: 1px solid gray;
+  border-radius: 10px;
+  background-color: white;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.body {
+  &-container {
+    background-image: url('assets/img/loginBackground.jpg');
+    // background-image: url("/w3images/photographer.jpg");
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  }
+}
